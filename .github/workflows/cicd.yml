@@ -12,7 +12,7 @@ env:
 
 jobs:
   dump:
-    runs-on: MARWIN11
+    runs-on: ubuntu-latest
     environment: dev
     steps:
       - name: Dump 
