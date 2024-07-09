@@ -19,8 +19,10 @@ jobs:
         run: |
             echo "ORG = ${{ env.ORG }}"
             echo "ORGVAR1 = ${{ vars.ORGVAR1 }}"
+            echo "ORGSEC1 = ${{ secrets.ORGSEC1 }}"
             echo "unknown secret is ${{ secrets.DOES_NOT_EXIST }}"
             echo "ENVVAR1 = ${{ vars.ENVVAR1 }}"
+            echo "ENVSEC1 = ${{ secrets.ENVVAR1 }}"
   
   #ci:
   #  uses: magrni/gs-dso-actions/.github/workflows/dotnet-ci.yml@main
