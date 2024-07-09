@@ -34,7 +34,7 @@ jobs:
 
   
   ci:
-    uses: ${{ env.ORG }}/gs-dso-templates/.github/workflows/dotnet-ci.yml@main
+    uses: marceorg/gs-dso-templates/.github/workflows/dotnet-ci.yml@main
     needs: dump
     #with:
     #  custom_param: "Some literal string 21"
