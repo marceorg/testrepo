@@ -27,7 +27,7 @@ jobs:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v3
         with:
-          #token: ${{ secrets.PAT }}
+          token: ${{ vars.PAT }}
           repository: ${{ env.ORG }}/gs-dso-templates
           event-type: my-event
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
