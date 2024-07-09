@@ -13,12 +13,14 @@ env:
 jobs:
   dump:
     runs-on: ubuntu-latest
+    environment: dev
     steps:
       - name: Dump 
         run: |
             echo "ORG = ${{ env.ORG }}"
             echo "ORGVAR1 = ${{ vars.ORGVAR1 }}"
             echo "unknown secret is ${{ secrets.DOES_NOT_EXIST }}"
+            echo "ENVVAR1 = ${{ vars.ENVVAR1 }}"
   
   #ci:
   #  uses: magrni/gs-dso-actions/.github/workflows/dotnet-ci.yml@main
