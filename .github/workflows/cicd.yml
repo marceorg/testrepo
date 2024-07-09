@@ -1,0 +1,27 @@
+name: CI/CD Pipeline
+
+run-name: "#${{github.run_number}} - Building ${{github.ref_name}} by @${{github.actor}}"
+
+on:
+  workflow_dispatch:  
+  push:
+    branches: [ "develop" ]
+
+env:
+  ORG: ${{github.repository_owner}}
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump 
+        run: |
+            echo "ORG = ${{ env.ORG }}"
+            echo "ORGVAR1 = ${{ vars.ORGVAR1 }}"
+            echo "unknown secret is ${{ secrets.DOES_NOT_EXIST }}"
+  
+  #ci:
+  #  uses: magrni/gs-dso-actions/.github/workflows/dotnet-ci.yml@main
+  #  needs: dump
+    #with:
+    #  custom_param: "Some literal string 21"
