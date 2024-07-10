@@ -35,7 +35,8 @@ jobs:
   
   cicd:
     uses: marceorg/gs-dso-templates/.github/workflows/dotnet-ci.yml@master
-    secrets: inherit
-    #needs: dump
     with:
       app_name: "testrepo"
+    secrets: inherit
+    #needs: dump
+    
