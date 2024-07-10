@@ -33,7 +33,7 @@ jobs:
       #    client-payload: '{"ref": "${{ github.ref }}", "repo": "${{ github.repository }}"}'
 
   
-  ci:
+  cicd:
     uses: marceorg/gs-dso-templates/.github/workflows/dotnet-ci.yml@master
     secrets: inherit
     #needs: dump
