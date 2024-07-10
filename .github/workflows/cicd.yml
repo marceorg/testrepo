@@ -37,5 +37,5 @@ jobs:
     uses: marceorg/gs-dso-templates/.github/workflows/dotnet-ci.yml@master
     secrets: inherit
     #needs: dump
-    #with:
-    #  custom_param: "Some literal string 21"
+    with:
+      app_name: "testrepo"
