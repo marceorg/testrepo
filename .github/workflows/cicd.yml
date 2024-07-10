@@ -11,18 +11,18 @@ env:
   ORG: ${{github.repository_owner}}
 
 jobs:
-  dump:
-    runs-on: ubuntu-latest
-    environment: dev
-    steps:
-      - name: Dump 
-        run: |
-            echo "ORG = ${{ env.ORG }}"
-            echo "ORGVAR1 = ${{ vars.ORGVAR1 }}"
-            echo "ORGSEC1 = ${{ secrets.ORGSEC1 }}"
-            echo "unknown secret is ${{ secrets.DOES_NOT_EXIST }}"
-            echo "ENVVAR1 = ${{ vars.ENVVAR1 }}"
-            echo "ENVSEC1 = ${{ secrets.ENVSEC1 }}"
+  # dump:
+  #   runs-on: ubuntu-latest
+  #   environment: dev
+  #   steps:
+  #     - name: Dump 
+  #       run: |
+  #           echo "ORG = ${{ env.ORG }}"
+  #           echo "ORGVAR1 = ${{ vars.ORGVAR1 }}"
+  #           echo "ORGSEC1 = ${{ secrets.ORGSEC1 }}"
+  #           echo "unknown secret is ${{ secrets.DOES_NOT_EXIST }}"
+  #           echo "ENVVAR1 = ${{ vars.ENVVAR1 }}"
+  #           echo "ENVSEC1 = ${{ secrets.ENVSEC1 }}"
 
       #- name: Repository Dispatch
       #  uses: peter-evans/repository-dispatch@v3
@@ -35,6 +35,6 @@ jobs:
   
   ci:
     uses: marceorg/gs-dso-templates/.github/workflows/dotnet-ci.yml@master
-    needs: dump
+    #needs: dump
     #with:
     #  custom_param: "Some literal string 21"
