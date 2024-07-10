@@ -38,4 +38,4 @@ jobs:
     secrets: inherit
     #needs: dump
     with:
-      app-name: "testrepo"
+      app-name: "TestRepo"
