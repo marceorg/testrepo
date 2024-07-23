@@ -1,4 +1,4 @@
-namespace TestRepo
+namespace TestRepo.Model
 {
     public class WeatherForecast
     {
