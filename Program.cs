@@ -7,6 +7,7 @@ using Microsoft.Extensions.Primitives;
 using System.Diagnostics;
 using TestRepo.Controllers;
 using TestRepo.Services;
+using static System.Net.WebRequestMethods;
 
 namespace TestRepo
 {
@@ -28,7 +29,8 @@ namespace TestRepo
             builder.Services.AddAzureAppConfiguration();
             builder.Configuration.AddAzureAppConfiguration(options =>
             {
-                options.Connect("Endpoint=https://lab-app-configuration-gs.azconfig.io;Id=gp7b-l0-s0:6x6DZDWK2D0UC69eJRY5;Secret=FCCzIpeiCfbHsYI395NS6ZicfPDrD5nMnxWULZbprgs=")
+                //options.Connect("Endpoint=https://lab-app-configuration-gs.azconfig.io;Id=gp7b-l0-s0:6x6DZDWK2D0UC69eJRY5;Secret=FCCzIpeiCfbHsYI395NS6ZicfPDrD5nMnxWULZbprgs=")
+                options.Connect("Endpoint=https://appconf-poc-lab.azconfig.io;Id=eZkE;Secret=7FPyoHb4B1allfvA43nGmq4xJb4JYjMupdOJIGgIstgQzlzlnG9wJQQJ99AGACYeBjFWLoKKAAABAZAClb3v")
                 .Select("TestRepo:*", LabelFilter.Null)
                 .ConfigureRefresh(refreshOptions =>
                 {
