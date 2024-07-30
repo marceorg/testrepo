@@ -67,5 +67,12 @@ namespace TestRepo.Controllers
         //    return Ok(conn);
             return Ok(_settings);
         }
+
+        [HttpGet("test")]
+        public IActionResult GetTest()
+        {
+            
+            return Ok("1");
+        }
     }
 }
