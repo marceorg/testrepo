@@ -72,7 +72,7 @@ namespace TestRepo.Controllers
         public IActionResult GetTest()
         {
             
-            return Ok("1");
+            return Ok("2");
         }
     }
 }
