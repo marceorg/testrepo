@@ -71,8 +71,7 @@ namespace TestRepo.Controllers
         [HttpGet("test")]
         public IActionResult GetTest()
         {
-            
-            return Ok("2");
+            return Ok("3");
         }
     }
 }
