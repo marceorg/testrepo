@@ -1,6 +1,6 @@
 name: CI/CD Pipeline
 
-run-name: "${{github.repository}} #${{github.run_number}} - Building ${{github.ref_name}} by @${{github.actor}}"
+run-name: "${{github.repository}} #${{github.run_id}} - Building ${{github.ref_name}} by @${{github.actor}}"
 
 on:
   workflow_dispatch:  
