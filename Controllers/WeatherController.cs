@@ -68,10 +68,10 @@ namespace TestRepo.Controllers
             return Ok(_settings);
         }
 
-        [HttpGet("test")]
-        public IActionResult GetTest()
+        [HttpGet("version")]
+        public IActionResult GetVersion()
         {
-            return Ok("5");
+            return Ok("1.0.1");
         }
     }
 }

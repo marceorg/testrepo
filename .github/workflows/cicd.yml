@@ -5,7 +5,9 @@ run-name: "${{github.repository}} #${{github.run_id}} - Building ${{github.ref_n
 on:
   workflow_dispatch:  
   push:
-    branches: [ "develop" ]
+    branches: 
+      - develop
+      - release/*
 
 env:
   ORG: ${{github.repository_owner}}
