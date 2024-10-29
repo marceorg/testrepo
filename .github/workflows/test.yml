@@ -15,9 +15,9 @@ jobs:
       - name: Set spec path
         run: |
           if [[ ${{ env.stack }} = "node"* ]]; then
-            echo "spec_path="repo/swagger-json" >> $GITHUB_ENV
+            echo "spec_path=repo/swagger-json" >> $GITHUB_ENV
           elif [[ ${{ env.stack }} = "net"* ]]; then
-            echo "spec_path="repo/swagger/swagger.json" >> $GITHUB_ENV
+            echo "spec_path=repo/swagger/swagger.json" >> $GITHUB_ENV
           else
             echo "stack no valido"
             exit 1
