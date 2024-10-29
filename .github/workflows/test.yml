@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Set spec path
         run: |
-          echo "apim_credential=${{ env.credentials }}" >> $GITHUB_ENV
+          echo "apim_credential='${{ env.credentials }}'" >> $GITHUB_ENV
           if [[ ${{ env.stack }} = "node"* ]]; then
             echo "spec_path=repo/swagger-json" >> $GITHUB_ENV
           elif [[ ${{ env.stack }} = "net"* ]]; then
