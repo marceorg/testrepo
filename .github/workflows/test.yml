@@ -19,6 +19,7 @@ jobs:
           elif [[ ${{ env.stack }} = *'net'* ]]
             echo "spec_path="repo/swagger/swagger.json" >> $GITHUB_ENV
           else
+            echo "stak no valido"
             exit 1
           fi        
 
