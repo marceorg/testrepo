@@ -6,7 +6,7 @@ on:
   workflow_dispatch:  
 
 env:
-  stack: 'node/20'
+  stack: 'net/20'
 
 jobs:
   dump:
