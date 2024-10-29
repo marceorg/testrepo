@@ -1,0 +1,25 @@
+name: Test Pipeline
+
+run-name: "#${{github.run_number}} - Testing ${{github.ref_name}} by @${{github.actor}}"
+
+on:
+  workflow_dispatch:  
+
+env:
+  stack: 'node/20'
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set spec path
+        run: |
+          if [ ${{ env.stack }} = *'node'* ]; then
+            echo "spec_path="repo/swagger-json" >> $GITHUB_ENV
+          elif [ ${{ env.stack }} = *'net'* ]
+            echo "spec_path="repo/swagger/swagger.json" >> $GITHUB_ENV
+          else
+            exit 1
+          fi        
+
+      - run: echo "${{ env.spec_path }}"
