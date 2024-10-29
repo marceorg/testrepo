@@ -7,7 +7,7 @@ on:
 
 env:
   stack: 'net/20'
-  credentials: '"{ "tenantId": "tenantid", "clientId": "clientId", "clientSecret": "clientSecret" }"'
+  credentials: '{ "tenantId": "tenantid", "clientId": "clientId", "clientSecret": "clientSecret" }'
 
 jobs:
   dump:
@@ -32,4 +32,4 @@ jobs:
           openAPIDefinitions: https://dev-cloud.svc.galiciaseguros.com.ar/gs-dso-gitflow-bff/swagger-json
           apiId: /subscriptions/b80ae9bd-4aa9-4f1e-ae01-6a08372e16e9/resourceGroups/rg-dev-apim-eastus/providers/Microsoft.ApiManagement/service/apim-dev-gs/apis/gs-dso-gitflow-bff_id
           apiUrlSuffix: gs-dso-gitflow-bff
-          credentials: ${{ env.credentials }}
+          credentials: "${{ env.credentials }}"
