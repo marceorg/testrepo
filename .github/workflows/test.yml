@@ -7,7 +7,7 @@ on:
 
 env:
   stack: 'net/20'
-  credentials: "{ 'tenantId': 'tenantid', 'clientId': 'clientId', 'clientSecret': 'clientSecret' }"
+  credentials: '{ \"tenantId\": \"tenantid\", \"clientId\": \"clientId\", \"clientSecret\": \"clientSecret\" }'
 
 jobs:
   dump:
