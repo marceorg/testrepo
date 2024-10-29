@@ -1,4 +1,4 @@
-ncname: Test Pipeline
+name: Test Pipeline
 
 run-name: "#${{github.run_number}} - Testing ${{github.ref_name}} by @${{github.actor}}"
 
@@ -16,7 +16,7 @@ jobs:
       - name: Set spec path
         run: |
           echo "apim_credential=${{ env.credentials }}" >> $GITHUB_ENV
-          #echo "${{ env.apim_credential }}"
+          echo "${{ env.apim_credential }}"
           if [[ ${{ env.stack }} = "node"* ]]; then
             echo "spec_path=repo/swagger-json" >> $GITHUB_ENV
           elif [[ ${{ env.stack }} = "net"* ]]; then
