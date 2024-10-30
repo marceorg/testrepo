@@ -32,9 +32,9 @@ jobs:
           fi        
 
       - run: echo "${{ env.spec_path }}"
-      - run: echo "${{ github.repository.custom_properties }}"
-      - run: echo "${{ github.repository.custom_properties.prueba }}"
-      - run: echo "${{ github.repository.custom_properties.prueba1 }}"
+      - run: echo "${{ github.event.repository.custom_properties }}"
+      - run: echo "${{ github.event.repository.custom_properties.prueba }}"
+      - run: echo "${{ github.event.repository.custom_properties.prueba1 }}"
 
       - name: Update Azure API Management OpenAPI schema
         uses: OssiPesonen/action-update-api-management-openapi@master
