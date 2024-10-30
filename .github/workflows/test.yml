@@ -13,6 +13,11 @@ jobs:
   dump:
     runs-on: ubuntu-latest
     steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+        
       - name: Set spec path
         run: |
           echo "apim_credential=${{ env.credentials }}" >> $GITHUB_ENV
@@ -27,6 +32,7 @@ jobs:
           fi        
 
       - run: echo "${{ env.spec_path }}"
+      - run: echo "${{ github.respository.custom-properties }}"
 
       - name: Update Azure API Management OpenAPI schema
         uses: OssiPesonen/action-update-api-management-openapi@master
